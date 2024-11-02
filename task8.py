@@ -4,3 +4,17 @@
 # Пример: ввод N = 4
 # [12, 77, 5555, 97]
 # Вывод: [77, 5555]
+
+
+# num = int(input())
+# raz = 3
+# # def func(num):
+# #     raz = len(str(num))-1
+# #     out = []
+# #     while num > 0:
+# #         out.append(num // 10**raz)
+# #         num -= num % 10**raz
+# #         print(num)
+# #     return out
+# #
+# # print(num % 10**raz)

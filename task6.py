@@ -4,3 +4,12 @@
 # Пример: ввод N = 6
 # [1,2,3,4,5,6]
 # Вывод: [3,2,1,6,5,4]
+
+import random
+N = int(input('N >> '))
+lst = [random.randint(0, 10) for i in range(N)]
+
+half_1 = (lst[0:int((len(lst)/2))])[::-1]
+half_2 = (lst[int((len(lst)/2)):int(len(lst))])[::-1]
+
+print(half_1 + half_2)
