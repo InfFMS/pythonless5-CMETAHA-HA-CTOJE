@@ -7,3 +7,17 @@
 # Вывод:
 # значение:3 индексы 2 и 3
 # значение:2 индексы 4 и 5
+
+import random
+N = int(input())
+lst = [random.randint(0, 5) for i in range(N)]
+print(lst)
+
+trig = 0
+for i in range(len(lst)-1):
+    if lst[i+1] == lst[i]:
+        print(f'значение: {lst[i]} индексы: {i}, {i+1}')
+        trig = 1
+
+if trig == 0:
+    print('Нет')

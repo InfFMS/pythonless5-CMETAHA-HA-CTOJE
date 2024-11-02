@@ -7,3 +7,16 @@
 # [1, 2, 3, 2, 5, 10]
 # Вывод:
 # значение:2 индексы 1 и 3
+
+import random
+N = int(input('N >> '))
+lst = [random.randint(0, 10) for i in range(N)]
+# print(lst)
+reester = []
+for i in range(len(lst)):
+    if lst.count(lst[i]) >= 2 and lst[i] not in reester:
+        count = []
+        reester.append(lst[i])
+        for j in range(i, len(lst)):
+            if lst[j] == lst[i]: count.append(str(j))
+        print(f'значение: {lst[i]} индексы: {', '.join(count)}')

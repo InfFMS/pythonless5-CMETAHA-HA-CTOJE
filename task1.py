@@ -6,3 +6,20 @@
 # 4.YES, если список содержит трехзначное число, состоящее из одинаковых цифр
 # NO в противном случае;
 # 5.список с удаленными первым и последним элементами.
+
+import random
+N = int(input())
+lst = [random.randint(0, 1000) for i in range(N)]
+print(len(lst), lst[-1], lst[::-1], sep='\n')
+trig = 0
+for i in lst:
+    i = str(i)
+    if len(i) == 3:
+        if i[0] == i[1] == i[2]:
+            print('YES')
+            trig = 1
+            break
+if trig == 0: print('NO')
+lst.pop(0)
+lst.pop(-1)
+print(lst)
